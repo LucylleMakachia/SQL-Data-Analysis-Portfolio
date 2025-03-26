@@ -32,8 +32,8 @@ CREATE TABLE books (
         REFERENCES authors (author_id),
     FOREIGN KEY (genre_id)
         REFERENCES genres (genre_id),
-	FOREIGN KEY (publisher_id)
-		REFERENCES publishers (publisher_id)
+    FOREIGN KEY (publisher_id)
+	REFERENCES publishers (publisher_id)
 );
 
 -- Publishers Table
@@ -68,10 +68,10 @@ CREATE TABLE sales (
         REFERENCES books (book_id),
     FOREIGN KEY (client_id)
         REFERENCES clients (client_id),
-	FOREIGN KEY (author_id)
+    FOREIGN KEY (author_id)
         REFERENCES authors (author_id),
-	FOREIGN KEY (publisher_id)
-		REFERENCES publishers (publisher_id)
+    FOREIGN KEY (publisher_id)
+	REFERENCES publishers (publisher_id)
 );
 
 -- Fill Authors Table
@@ -161,7 +161,7 @@ VALUES
 -- View Top-Selling book
 SELECT b.title, SUM(s.quantity) AS total_sold
 FROM books b
-JOIN sales s ON b.book_id = s.book_id
+INNER JOIN sales s ON b.book_id = s.book_id
 GROUP BY b.title
 ORDER BY total_sold DESC
 LIMIT 1;
@@ -169,8 +169,8 @@ LIMIT 1;
  -- View books by Chimamanda Ngozi Adichie
 SELECT b.title, b.published_date, g.genre_name, b.price
 FROM books b
-JOIN authors a ON b.author_id = a.author_id
-JOIN genres g ON b.genre_id = g.genre_id
+INNER JOIN authors a ON b.author_id = a.author_id
+INNER JOIN genres g ON b.genre_id = g.genre_id
 WHERE a.name = 'Chimamanda Ngozi Adichie';
 
 -- View Total Sales Revenue
@@ -180,14 +180,14 @@ FROM sales;
 -- View Total Number of Books Sold per Genre
 SELECT g.genre_name, SUM(s.quantity) AS total_sold
 FROM genres g
-JOIN books b ON g.genre_id = b.genre_id
-JOIN sales s ON b.book_id = s.book_id
+INNER JOIN books b ON g.genre_id = b.genre_id
+INNER JOIN sales s ON b.book_id = s.book_id
 GROUP BY g.genre_name
 ORDER BY total_sold DESC;
 
 -- View Total Amount Spent Per Client
 SELECT c.name, SUM(s.total_price) AS total_spent
-FROM clients c
+INNER FROM clients c
 JOIN sales s ON c.client_id = s.client_id
 GROUP BY c.name
 ORDER BY total_spent DESC;
