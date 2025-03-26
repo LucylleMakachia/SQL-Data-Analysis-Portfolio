@@ -1,8 +1,8 @@
-### Bookstore Database Project
+# Bookstore Database Project
 This project demonstrates the creation of a relational database for a bookstore, designed to handle authors, genres, books, publishers, clients, and sales. Below is a summary of the database structure and key functionality:
 
 ## Database Structure
-# Tables:
+### Tables:
 
 1. authors: Stores information about authors, including name, gender, biography, and birthdate.
 
@@ -16,7 +16,7 @@ This project demonstrates the creation of a relational database for a bookstore,
 
 6. sales: Records sales transactions with book details, clients, quantity sold, total price, and dates.
 
-## Key Features
+### Key Features
 Data Relationships:
 1. Foreign keys connect books with authors, genres, and publishers, ensuring referential integrity.
 
@@ -24,7 +24,7 @@ Data Relationships:
 
 Data Insertion: Pre-populated tables with sample data for authors, genres, books, publishers, clients, and sales.
 
-## Sample Queries:
+### Sample Queries:
 
 Find the top-selling book:
 sql
@@ -64,7 +64,7 @@ sql
   GROUP BY c.name
   ORDER BY total_spent DESC;
 
-## How to Use: 
+### How to Use: 
 1. Execute the provided CREATE statements to build the database structure.
 
 2. Populate the tables using the INSERT statements.
