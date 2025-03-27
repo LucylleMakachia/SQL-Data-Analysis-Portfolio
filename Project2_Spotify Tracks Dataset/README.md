@@ -1,6 +1,9 @@
 # Spotify Tracks Database Project
 This project involves the exploration and analysis of a dataset containing Spotify track information. The database schema and queries help uncover insights such as the most popular tracks, longest songs, and genre trends.
 
+## Access Data
+https://github.com/LucylleMakachia/SQL-Data-Analysis-Portfolio/tree/d9257fe00d5df840550f8634b98c98764bbf383d/Project2_Spotify%20Tracks%20Dataset/Data 
+
 ## Database Setup
 Schema Creation:
 Database name: spotify.
