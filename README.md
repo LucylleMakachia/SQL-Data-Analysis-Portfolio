@@ -3,7 +3,7 @@ Welcome to my SQL Data Analysis Portfolio! This repository showcases my skills i
 
 ## Projects
 
-1. [[Project1 Bookstore](url)] 
+1. [[Project1 Bookstore](url)] - https://github.com/LucylleMakachia/SQL-Data-Analysis-Portfolio/tree/main/Project1_Bookstore
    Data used: Data for this analysis was generated using Microsoft Copilot for simulation purposes.
    Summary: This project demonstrates the creation of a fully relational database for a bookstore, designed to handle authors, genres, books, publishers, clients, and sales.
    
